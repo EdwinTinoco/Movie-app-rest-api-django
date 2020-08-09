@@ -88,10 +88,10 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'movie_db',
-        'USER': 'root',
-        'PASSWORD': 'benjy2012!',
-        'HOST': 'localhost',
+        'NAME': 'heroku_48bca679d42e26f',
+        'USER': 'bac22bd2df6524',
+        'PASSWORD': 'bb82186d',
+        'HOST': 'us-cdbr-east-02.cleardb.com',
         'PORT': '3306',
         'CURSORCLASS': 'DictCursor',
         'OPTIONS': {
