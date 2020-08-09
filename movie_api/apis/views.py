@@ -34,8 +34,15 @@ class MovieList(APIView):
       image_url, year_release, classification, duration])
 
       connection.commit()
+
+      cursor.callproc("spGetLastInsertedMovie", ())
+      columns = [column[0] for column in cursor.description]
+      movie = []
+      for row in cursor.fetchall():
+         movie.append(dict(zip(columns, row)))
+
       cursor.close()
-      return Response('Movie added succesfully!')
+      return Response(movie)
 
 
 

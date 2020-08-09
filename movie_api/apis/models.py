@@ -38,3 +38,10 @@ class Users(models.Model):
    class Meta:
       db_table = 'users'
 
+
+class UserAuth(models.Model):
+   name_auth = models.CharField(max_length=100, blank=False)
+
+   class Meta:
+      db_table = 'user_authorization'
+
