@@ -8,8 +8,6 @@ class Movies(models.Model):
    year_release = models.PositiveIntegerField(blank=False)
    classification = models.CharField(max_length=50)
    duration = models.CharField(max_length=20)
-   ratings = models.IntegerField()
-   rated = models.FloatField()
 
    class Meta:
       db_table = 'movies'

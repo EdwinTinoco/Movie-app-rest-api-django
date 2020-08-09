@@ -17,7 +17,6 @@ class MovieList(APIView):
          movies.append(dict(zip(columns, row)))    
 
       cursor.close()
-
       return Response(movies)
       
 
@@ -29,16 +28,13 @@ class MovieList(APIView):
       year_release = request.data['year_release']
       classification = request.data['classification']
       duration = request.data['duration']
-      ratings = request.data['ratings']
-      rated = request.data['rated']
 
       cursor = connection.cursor()
       cursor.callproc("spInsertMovie", [title, description, genre,
-      image_url, year_release, classification, duration, ratings, rated])
+      image_url, year_release, classification, duration])
 
       connection.commit()
       cursor.close()
-
       return Response('Movie added succesfully!')
 
 
@@ -54,7 +50,6 @@ class MovieDetail(APIView):
          movie.append(dict(zip(columns, row))) 
 
       cursor.close()
-
       return Response(movie)
 
 
@@ -66,16 +61,13 @@ class MovieDetail(APIView):
       year_release = request.data['year_release']
       classification = request.data['classification']
       duration = request.data['duration']
-      ratings = request.data['ratings']
-      rated = request.data['rated']
 
       cursor = connection.cursor()
       cursor.callproc("spUpdateMovieById", [pk, title, description, genre,
-      image_url, year_release, classification, duration, ratings, rated])
+      image_url, year_release, classification, duration])
 
       connection.commit()
-      cursor.close()     
-
+      cursor.close() 
       return Response("Movie info updated successfully!")
 
 
