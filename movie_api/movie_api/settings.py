@@ -25,7 +25,7 @@ SECRET_KEY = 'lz+z++(sk^ndv212-=5jf&)&!i2nrpg(s4yn@1c*c8ina+t-z*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise middleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -85,10 +84,10 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_48bca679d42e26f',
-        'USER': 'bac22bd2df6524',
-        'PASSWORD': 'bb82186d',
-        'HOST': 'us-cdbr-east-02.cleardb.com',
+        'NAME': 'movie_db',
+        'USER': 'root',
+        'PASSWORD': 'benjy2012!',
+        'HOST': 'localhost',
         'PORT': '3306',
         'CURSORCLASS': 'DictCursor',
         'OPTIONS': {
@@ -134,14 +133,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
 
-# Configure Django App for Heroku.
-# import django_heroku
-# django_heroku.settings(locals())
+
