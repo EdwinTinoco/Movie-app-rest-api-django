@@ -110,8 +110,8 @@ class MovieAddComment(APIView):
 
       cursor = connection.cursor()
       cursor.callproc("spInsertComment", [comment, created, movie_id, user_id])
-
       connection.commit()
+      
       cursor.close()
       return Response('Comment added succesfully!')
 
