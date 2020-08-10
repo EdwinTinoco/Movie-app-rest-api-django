@@ -25,7 +25,7 @@ SECRET_KEY = 'lz+z++(sk^ndv212-=5jf&)&!i2nrpg(s4yn@1c*c8ina+t-z*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ejlt-djangorf-movie-api.herokuapp.com']
 
 
 # Application definition
