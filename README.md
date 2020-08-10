@@ -2,7 +2,6 @@
 
 ### Techologies used:
 #### - Django Rest Framework
-#### - Django CMS
 #### - Based-class Views
 #### - Python
 #### - MySQL
@@ -10,3 +9,4 @@
 
 
 > Edwin Tinoco - Software Engineer/Web Developer
+
